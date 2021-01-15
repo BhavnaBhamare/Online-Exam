@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 15, 2021 2:45:46 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Teacher" table="teacher" catalog="erpschool">
+        <id name="tid" type="java.lang.Integer">
+            <column name="tid" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="200" />
+        </property>
+        <property name="post" type="string">
+            <column name="post" length="200" />
+        </property>
+        <property name="logname" type="string">
+            <column name="logname" length="200" />
+        </property>
+        <property name="logpass" type="string">
+            <column name="logpass" length="200" />
+        </property>
+        <property name="salary" type="string">
+            <column name="salary" length="200" />
+        </property>
+        <property name="photo" type="string">
+            <column name="photo" length="200" />
+        </property>
+        <property name="aadhar" type="string">
+            <column name="aadhar" />
+        </property>
+        <property name="pancade" type="string">
+            <column name="pancade" length="200" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" length="200" />
+        </property>
+        <property name="age" type="string">
+            <column name="age" length="3" />
+        </property>
+        <property name="dob" type="string">
+            <column name="DOB" length="200" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="200" />
+        </property>
+        <property name="joindate" type="string">
+            <column name="joindate" />
+        </property>
+        <property name="subjects" type="string">
+            <column name="subjects" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 15, 2021 2:45:46 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Exampaper" table="exampaper" catalog="erpschool">
+        <id name="eid" type="java.lang.Integer">
+            <column name="eid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="testseries" class="com.pojo.Testseries" fetch="select">
+            <column name="tsid" />
+        </many-to-one>
+        <property name="std" type="string">
+            <column name="std" />
+        </property>
+        <property name="questionno" type="string">
+            <column name="questionno" />
+        </property>
+        <property name="question" type="string">
+            <column name="question" />
+        </property>
+        <property name="ch1" type="string">
+            <column name="ch1" />
+        </property>
+        <property name="ch2" type="string">
+            <column name="ch2" />
+        </property>
+        <property name="ch3" type="string">
+            <column name="ch3" />
+        </property>
+        <property name="ch4" type="string">
+            <column name="ch4" />
+        </property>
+        <property name="ch5" type="string">
+            <column name="ch5" />
+        </property>
+        <property name="ans" type="string">
+            <column name="ans" />
+        </property>
+        <property name="questionmarks" type="string">
+            <column name="questionmarks" />
+        </property>
+    </class>
+</hibernate-mapping>

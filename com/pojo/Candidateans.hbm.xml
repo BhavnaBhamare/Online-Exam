@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 15, 2021 2:45:46 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Candidateans" table="candidateans" catalog="erpschool">
+        <id name="caid" type="java.lang.Integer">
+            <column name="caid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="candidate" class="com.pojo.Candidate" fetch="select">
+            <column name="cid" />
+        </many-to-one>
+        <property name="questionno" type="string">
+            <column name="questionno" />
+        </property>
+        <property name="ans" type="string">
+            <column name="ans" />
+        </property>
+    </class>
+</hibernate-mapping>

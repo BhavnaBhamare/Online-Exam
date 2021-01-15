@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 15, 2021 2:45:46 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Student" table="student" catalog="erpschool">
+        <id name="sid" type="java.lang.Integer">
+            <column name="sid" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="200" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="uniqueid" length="200" not-null="true" unique="true" />
+        </property>
+        <property name="logname" type="string">
+            <column name="logname" length="200" />
+        </property>
+        <property name="logpass" type="string">
+            <column name="logpass" length="200" />
+        </property>
+        <property name="standard" type="string">
+            <column name="standard" length="200" />
+        </property>
+        <property name="division" type="string">
+            <column name="division" length="200" />
+        </property>
+        <property name="stdrollno" type="string">
+            <column name="stdrollno" length="220" />
+        </property>
+        <property name="pid" type="java.lang.Integer">
+            <column name="pid" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="200" />
+        </property>
+        <property name="age" type="string">
+            <column name="age" length="200" />
+        </property>
+        <property name="dob" type="string">
+            <column name="dob" length="200" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" length="200" />
+        </property>
+        <property name="aadhar" type="string">
+            <column name="aadhar" length="200" />
+        </property>
+        <property name="fsid" type="java.lang.Integer">
+            <column name="fsid" />
+        </property>
+        <property name="deductionfee" type="string">
+            <column name="deductionfee" />
+        </property>
+        <property name="unpaid" type="string">
+            <column name="unpaid" />
+        </property>
+        <property name="paid" type="string">
+            <column name="paid" />
+        </property>
+        <property name="fine" type="string">
+            <column name="fine" />
+        </property>
+        <property name="totalfee" type="string">
+            <column name="totalfee" />
+        </property>
+        <property name="deposit" type="string">
+            <column name="deposit" />
+        </property>
+        <property name="birthcertificate" type="string">
+            <column name="birthcertificate" length="200" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="200" />
+        </property>
+        <set name="candidates" table="candidate" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sid" />
+            </key>
+            <one-to-many class="com.pojo.Candidate" />
+        </set>
+    </class>
+</hibernate-mapping>

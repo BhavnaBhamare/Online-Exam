@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 15, 2021 2:45:46 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pojo.Testseries" table="testseries" catalog="erpschool">
+        <id name="tsid" type="java.lang.Integer">
+            <column name="tsid" />
+            <generator class="identity" />
+        </id>
+        <property name="tsname" type="string">
+            <column name="tsname" />
+        </property>
+        <set name="exampapers" table="exampaper" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tsid" />
+            </key>
+            <one-to-many class="com.pojo.Exampaper" />
+        </set>
+        <set name="candidates" table="candidate" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tsid" />
+            </key>
+            <one-to-many class="com.pojo.Candidate" />
+        </set>
+        <set name="scores" table="score" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tsid" />
+            </key>
+            <one-to-many class="com.pojo.Score" />
+        </set>
+    </class>
+</hibernate-mapping>
